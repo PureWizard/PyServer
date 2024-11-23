@@ -144,7 +144,7 @@ class DirectoryListingHandler(http.server.BaseHTTPRequestHandler):
             full_path = os.path.join(path, name)
             display_name = name + ('/' if os.path.isdir(full_path) else '')
             href = os.path.join(self.path, name)
-            icon = "📂" if os.path.isdir(full_path) else "📷"
+            icon = "📂" if os.path.isdir(full_path) else "📄"
             html += f'<li class="file-item"><span class="file-icon">{icon}</span><a href="{href}">{display_name}</a></li>'
 
         html += """
